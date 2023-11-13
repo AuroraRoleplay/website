@@ -1,4 +1,4 @@
-const url = 'http://209.145.56.181:30120/players.json';
+const url = 'https://209.145.56.181:30120/players.json';
 
 // Make a GET request to the URL
 fetch(url)
@@ -14,6 +14,7 @@ fetch(url)
     // Access the player count from the JSON data
     const playerCount = data.length; // Assuming the player count is the length of the array
     console.log('Player count:', playerCount);
+    document.getElementById('online').innerHTML = playerCount;
   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
