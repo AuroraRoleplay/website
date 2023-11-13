@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Roleplay &mdash; info</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="stylesheet" href="assets/css/bulma.css">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <p style="margin-left: 10px;">Aurora</p>          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a href="/" class="navbar-item">
+              Home
+            </a>
+      
+            <a href="/info" class="navbar-item">
+              Info
+            </a>
+
+            <a href="/rules" class="navbar-item">
+              Rules
+            </a>
+
+            <a target="_blank" href="/discord" class="navbar-item">
+              Discord
+            </a>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a target="_blank" href="/apply" class="button is-primary">
+                  <strong>Apply</strong>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <div class="container" id="balls">
+        <div class="hero">
+          <br>
+          <h1 class="title is-3">Apply</h1>
+          <p>
+              Send an application to join the server. We will review it and get back to you as soon as possible.
+          </p>
+          <br>
+        </div>
+        <form id="ballsform" action="https://api.almix.net/v1/aurora" method="post">
+          <div class="field">
+            <label class="label" for="discord">Discord <span style="font-weight: 400; color: red;">*</span></label>
+            <div class="control has-icons-left">
+              <input class="input" type="text" id="discord" name="discord" placeholder="Your Discord" required>
+              <span class="icon is-small is-left">
+                <i class="fab fa-discord"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="age">Age <span style="font-weight: 400; color: red;">*</span></label>
+            <div class="control has-icons-left">
+              <input class="input" type="number" id="age" name="age" placeholder="Your age" max="40" required>
+              <span class="icon is-small is-left">
+                <i class="fas fa-birthday-cake"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <label class="label" for="anything-else">Anything else?</label>
+            <div class="control has-icons-left">
+              <textarea class="textarea" id="anything else" name="anythingelse" ></textarea>
+            </div>
+          </div>
+      
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" type="submit">Submit</button>
+            </div>
+            <div class="control">
+              <button class="button is-link is-light" type="button">Cancel</button>
+            </div>
+          </div>
+          <small>Note: <span style="color: red;">*</span> indicates a required question</small>
+          <div id="alert" style="color: red;"></div>
+        </form>
+      </div>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/apply.js"></script>
+</body>
+</html>
