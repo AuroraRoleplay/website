@@ -1,4 +1,4 @@
-const url = 'https://209.145.56.181:30120/players.json';
+const url = 'http://209.145.56.181:30120/players.json';
 
 // Make a GET request to the URL
 fetch(url)
